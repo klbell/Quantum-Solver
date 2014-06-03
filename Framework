@@ -198,4 +198,7 @@ namespace QuantumSolverFramework
         
 
     }
-}
+    
+    // Then you could do something to produce a potential
+    // then you could use the potential field to produce the 
+    // wavefunction based on the SE and some FDTD method
