@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>ILNumerics.Native</id>
+    <version>3.2.0</version>
+    <authors>ILNumerics</authors>
+    <owners>ILNumerics</owners>
+    <licenseUrl>http://www.gnu.org/copyleft/gpl.html</licenseUrl>
+    <projectUrl>http://ilnumerics.net/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>ILNumerics brings Matlab-like syntax, high performance execution and 2D/3D visualisations for programmers and scientists on .NET (C#). This package adds native dependencies for 32 bit and 64 bit only. It is automatically loaded when the main package 'ILNumerics' is referenced.</description>
+    <releaseNotes>See release notes in changelog.txt</releaseNotes>
+    <copyright>Copyright 2013, ILNumerics</copyright>
+    <tags>C# HPC Performance Matlab Visualisations Matrix 3D Complex FFT LAPACK Scene Graph Math Algorithm Numeric PSModule</tags>
+  </metadata>
+</package>

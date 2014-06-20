@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>ILNumerics</id>
+    <version>3.3.3.0</version>
+    <authors>ILNumerics</authors>
+    <owners>ILNumerics</owners>
+    <licenseUrl>http://www.gnu.org/copyleft/gpl.html</licenseUrl>
+    <projectUrl>http://ilnumerics.net/</projectUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>Main ILNumerics AnyCPU assembly; brings Matlab-like syntax, high performance execution and 2D/3D visualisations for programmers and scientists on .NET (C#).</description>
+    <releaseNotes>See release notes in changelog.txt</releaseNotes>
+    <copyright>Copyright 2014, ILNumerics</copyright>
+    <tags>C# HPC Performance Matlab Visualisations Matrix 3D Complex FFT LAPACK Scene Graph Math Algorithm Numeric PSModule</tags>
+    <dependencies>
+      <dependency id="ILNumerics.Native" version="3.2.0" />
+    </dependencies>
+  </metadata>
+</package>
