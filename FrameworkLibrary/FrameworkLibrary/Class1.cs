@@ -15,7 +15,7 @@ namespace FrameworkLibrary
             int[] N { get; set; }
             T Value { get; set; }
         }
-        class Wavefunction : Field<Complex[,,]>
+        public class Wavefunction : Field<Complex[,,]>
         {
             ////////////////////////
             //Property Declarations
@@ -61,8 +61,8 @@ namespace FrameworkLibrary
                 }
 
             }
-            private double[][] value;
-            public double[][] Value
+            private Complex[,,] value;
+            public Complex[,,] Value
             {
                 get
                 {
@@ -79,7 +79,7 @@ namespace FrameworkLibrary
             /// Private Methods
             ////////////////////
 
-            private Wavefunction(int dimension, double[] window, int[] samplesize)
+            public Wavefunction(int dimension, double[] window, int[] samplesize)
             {
 
                 // Initialize field as zero everywhere
@@ -88,25 +88,14 @@ namespace FrameworkLibrary
                 Dim = dimension;
                 N = new int[dim];
                 Size = new double[dim];
-                for (i = 0; i < dim; i++)
-                {
-                    N[i] = samplesize[i];
-                }
-                for (i = 0; i < dim; i++)
-                {
-                    Value[i] = new double[N[i]];
-                }
-                Size = window;
-                foreach (double[] f in Value)
-                {
-                    for (i = 0; i < dim; i++) { f[i] = 0; }
-                }
+                N = samplesize;
+                Value = new Complex[N[0], N[1], N[2]];
             }
 
 
 
         }
-        class Potential : Field<double[,,]>
+        public class Potential : Field<double[,,]>
         {
             ////////////////////////
             //Property Declarations
@@ -170,7 +159,7 @@ namespace FrameworkLibrary
             /// Private Methods
             ////////////////////
 
-            private Potential(int dimension, double[] window, int[] samplesize)
+            public Potential(int dimension, double[] window, int[] samplesize)
             {
 
                 // Initialize field as zero everywhere
@@ -201,7 +190,7 @@ namespace FrameworkLibrary
 
 
         }
-        class Electric : Field<double[][,,]>
+        public class Electric : Field<double[][,,]>
         {
             ////////////////////////
             //Property Declarations
@@ -265,7 +254,7 @@ namespace FrameworkLibrary
             /// Private Methods
             ////////////////////
 
-            private Electric(int dimension, double[] window, int[] samplesize)
+            public Electric(int dimension, double[] window, int[] samplesize)
             {
 
                 // Initialize field as zero everywhere
@@ -296,7 +285,7 @@ namespace FrameworkLibrary
 
 
         }
-        class Magnetic : Field<double[][,,]>
+        public class Magnetic : Field<double[][,,]>
         {
             ////////////////////////
             //Property Declarations
@@ -360,7 +349,7 @@ namespace FrameworkLibrary
             /// Private Methods
             ////////////////////
 
-            private Magnetic(int dimension, double[] window, int[] samplesize)
+            public Magnetic(int dimension, double[] window, int[] samplesize)
             {
 
                 // Initialize field as zero everywhere
