@@ -12,7 +12,6 @@ namespace FrameworkLibrary
             int Dim { get; set; }
             double[] Size { get; set; }
             int[] N { get; set; }
-            var[][] Value { get; set; }
         }
         class Wavefunction : Field
         {
