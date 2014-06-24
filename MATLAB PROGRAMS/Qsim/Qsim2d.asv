@@ -1,22 +1,8 @@
-function [] = Qsim1d()
-% Yee Algorithm (ie, the first thing anyone thinks of trying)
-% 1. Replace all the derivatives in Ampere’s and Faraday’s laws with finite 
-% differences. Discretize space and time so that the electric and magnetic 
-% fields are staggered in both space and time.
-%
-% 2. Solve the resulting difference equations to obtain “update equations” 
-% that express the (unknown) future fields in terms of (known) past fields.
-%
-% 3. Evaluate the magnetic fields one time-step into the future so they are 
-% now known (effectively they become past fields).
-%
-% 4. Evaluate the electric fields one time-step into the future so they are
-% now known (effectively they become past fields).
-%
-% 5. Repeat the previous two steps until the fields have been obtained over 
-% the desired duration.
+function [] = Qsim2d()
+% A 2D version of Qsim1d
+% Simply
 
-
+% The sim will be 
 L = 100;
 N = 1000;
 iterations = 5000;
@@ -72,4 +58,6 @@ for t = 1:iterations
     
 end
 
+
 end
+
