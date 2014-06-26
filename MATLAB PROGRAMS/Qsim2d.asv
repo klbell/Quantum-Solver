@@ -26,9 +26,9 @@ c = 1/sqrt(mu0*e0);
 
 % Gaussian initial wf 
 omega = 16*pi;
-ymod = gaussmf(y, [L/25, L/2]);
+ymod = gaussmf(y, [L/50, L/2]);
 for n = 1:N
-    psi(:,n) = gaussmf(x, [L/25, L/4]) * ymod(n);% .*exp(+1i*omega.*x);
+    psi(:,n) = gaussmf(x, [L/50, L/4]) * ymod(n) .*exp(+1i*omega.*x);
 end
 E = real(energy_expectation(psi, a, hbar, m))
 pause(1);
@@ -37,16 +37,13 @@ psi = psi / sqrt(norm2(psi,a));
 
 % Potential
 U = zeros(N,N);
-U(floor(N/3):floor(2*N/3),:) = -0.001;
-
+U(:end,:) = -(1e6)*real(E);
+figure(2); surfc(U);
 
 for i = 1:length(U)
-    U(:,i) = smooth(U(:,i),75);
+    U(:,i) = smooth(U(:,i));
 end
-figure(2); h = surfc(U);
-view(90,90);
-set(h, 'edgecolor', 'none');
-title('Potential');
+
 
 % Just say you cant move a space faster than a little less than c, I guess
 dt =  0.05;
